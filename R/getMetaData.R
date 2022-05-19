@@ -2,7 +2,8 @@
 #'
 #' @param identifer The identifier ("kennung")
 #' @return The metadata as a list.
-#' @example
+#' @export
+#' @examples
 #' id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
 #' getMetaData(id)
 getMetaData <- function(identifier) {

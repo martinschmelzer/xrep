@@ -15,3 +15,9 @@ If \code{simplify} is \code{true}, a data.frame of the codelist with additional 
 \description{
 Download data from xrepository
 }
+\examples{
+id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
+validVersion <- getValidVersion(id)
+print(validVersion)
+getMetaData(validVersion)
+}

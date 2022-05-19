@@ -2,6 +2,10 @@
 #'
 #' @param identifer The identifier ("kennung")
 #' @return The identifier of the valid version of the codelist
+#' @export
+#' @examples
+#' id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
+#' getValidVersion(id)
 getValidVersion <- function(identifier) {
   stopifnot(is.character(identifier))
 

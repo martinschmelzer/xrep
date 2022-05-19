@@ -2,7 +2,8 @@
 #'
 #' @param identifer The identifier ("kennung")
 #' @return If \code{simplify} is \code{true}, a data.frame of the codelist with additional information such as metadata as attributes. OTherwise a list.
-#' @example
+#' @export
+#' @examples
 #' id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
 #' validVersion <- getValidVersion(id)
 #' print(validVersion)
@@ -22,7 +23,7 @@ getData <- function(identifier, simplify = T) {
     return (content)
   } else {
     cols <- content$spalten
-    out <- setNames(data.frame(content$daten), cols$spaltennameTechnisch)
+    out <- stats::setNames(data.frame(content$daten), cols$spaltennameTechnisch)
     attr(out, "metadaten") <- content$metadaten
     attr(out, "spalten") <- content$spalten
     return(out)

@@ -15,3 +15,7 @@ The metadata as a list.
 \description{
 Download meta data for xrepository content
 }
+\examples{
+id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
+getMetaData(id)
+}
