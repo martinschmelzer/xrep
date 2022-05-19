@@ -1,0 +1,30 @@
+#' Download data from xrepository
+#'
+#' @param identifer The identifier ("kennung")
+#' @return If \code{simplify} is \code{true}, a data.frame of the codelist with additional information such as metadata as attributes. OTherwise a list.
+#' @example
+#' id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
+#' validVersion <- getValidVersion(id)
+#' print(validVersion)
+#' getMetaData(validVersion)
+getData <- function(identifier, simplify = T) {
+  stopifnot(is.logical(simplify), is.character(identifier))
+
+  url <- sprintf("https://www.xrepository.de/api/xrepository/%s/json", identifier)
+  res <- httr::GET(url)
+  content <- jsonlite::fromJSON(httr::content(res, as = "text", encoding = "UTF-8"))
+
+  if(res$status_code == 404) {
+    stop(content$meldung)
+  }
+
+  if (!simplify) {
+    return (content)
+  } else {
+    cols <- content$spalten
+    out <- setNames(data.frame(content$daten), cols$spaltennameTechnisch)
+    attr(out, "metadaten") <- content$metadaten
+    attr(out, "spalten") <- content$spalten
+    return(out)
+  }
+}
