@@ -7,7 +7,7 @@
 getValidVersion(identifier)
 }
 \arguments{
-\item{identifer}{The identifier ("kennung")}
+\item{identifier}{The identifier ("kennung")}
 }
 \value{
 The identifier of the valid version of the codelist

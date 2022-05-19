@@ -7,7 +7,7 @@
 getMetaData(identifier)
 }
 \arguments{
-\item{identifer}{The identifier ("kennung")}
+\item{identifier}{The identifier ("kennung")}
 }
 \value{
 The metadata as a list.

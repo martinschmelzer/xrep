@@ -7,7 +7,9 @@
 getData(identifier, simplify = T)
 }
 \arguments{
-\item{identifer}{The identifier ("kennung")}
+\item{identifier}{The identifier ("kennung")}
+
+\item{simplify}{\code{logical} Should a \code{data.frame} be returned.}
 }
 \value{
 If \code{simplify} is \code{true}, a data.frame of the codelist with additional information such as metadata as attributes. OTherwise a list.

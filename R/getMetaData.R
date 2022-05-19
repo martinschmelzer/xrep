@@ -1,6 +1,6 @@
 #' Download meta data for xrepository content
 #'
-#' @param identifer The identifier ("kennung")
+#' @param identifier The identifier ("kennung")
 #' @return The metadata as a list.
 #' @export
 #' @examples

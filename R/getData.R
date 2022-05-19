@@ -1,6 +1,7 @@
 #' Download data from xrepository
 #'
-#' @param identifer The identifier ("kennung")
+#' @param identifier The identifier ("kennung")
+#' @param simplify \code{logical} Should a \code{data.frame} be returned.
 #' @return If \code{simplify} is \code{true}, a data.frame of the codelist with additional information such as metadata as attributes. OTherwise a list.
 #' @export
 #' @examples
