@@ -1,8 +1,8 @@
-#' Download data from xrepository
+#' Download data from xrepository.de
 #'
 #' @param identifier The identifier ("kennung")
 #' @param simplify \code{logical} Should a \code{data.frame} be returned.
-#' @return If \code{simplify} is \code{true}, a data.frame of the codelist with additional information such as metadata as attributes. OTherwise a list.
+#' @return If \code{simplify} is \code{true}, a \code{data.frame} of the codelist with additional information such as metadata as attributes. Otherwise a list.
 #' @export
 #' @examples
 #' id <- "urn:de:bund:destatis:bevoelkerungsstatistik:schluessel:staatsangehoerigkeit"
